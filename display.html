@@ -3,82 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>Display</title>
+    <link rel="stylesheet" href="display.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="cart.css">
+
 </head>
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-  }
-  .container{
-      max-width: 250px;
-      margin-left: auto;
-      margin-right: auto;
-  }
-  .row{
-      display: flex;
-      max-width: 100px;
-      flex-wrap: wrap;
-      margin-left: -15px;
-      margin-right: -15px;
-  }
-  header{
-      background-color: #FA8258;
-      padding: 10px 0 10px 0;
-  }
-  *{
-      text-decoration: none;
-      color: white;
 
-  }
-  .col-2{
-      flex: 0 0 15%;
-      max-width: 15%;
-  }
-  .col-3 {
-      flex: 0 0 25%;
-      max-width: 25%;
-  }
-  .col-8{
-      flex: 0 0 70%;
-      max-width: 70%;
-  }
-  .col-12{
-      flex: 0 0 100%;
-      max-width: 100%;
-  }
-  .menu ul li {
-      float: left;
-      margin-left: 20px;
-      list-style: none;
-  }
-  .menu{
-      display: flex;
-      justify-content: flex-end;
-  }
-</style>
 <body>
-   <header>
-     <div class="container">
-          <div class="row">
-              <div class="col-2 menu">
-                  <img src="image/tnc-logo.svg">
-              </div>
-              <div class="col-2">
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href=""><img style="width: 150px" src="image/tnc-logo.svg" alt=""></a></li>
+            <li><label><input type="text" placeholder="Ban tim gi..."></label><i class="fas fa-search"></i></li>
+            <li><a href="cart.html">
+                <button><i class="fas fa-shopping-cart"></i>Giỏ hàng</button>
+            </a></li>
+            <li><a href="login.html">Đăng nhập</a></li>
+            <li><a href="">Khuyến mãi</a></li>
+            )
+        </ul>
+    </div>
+</nav>
+<section class="menu-bar">
+    <div class="container">
+        <div class="menu-bar-content">
+            <ul>
+                <li><a href=""><i class="fas fa-desktop"></i>Danh MỤC SẢN PHẨM</a></li>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="">Máy bàn</a></li>
+                        <li><a href="">Laptop</a></li>
+                        <li><a href="">Apple</a></li>
+                        <li><a href="">Gaming Gear</a></li>
+                        <li><a href="">Thiết bị mạng</a></li>
+                        <li><a href="">Màn hình máy tính</a></li>
+                    </ul>
+                </div>
+                <li><a href=""><i class="fas fa-cogs"></i>XÂY DỰNG CẤU HÌNH</a></li>
+                <li><a href=""><i class="far fa-newspaper"></i>TIN TỨC</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="slider">
+    <div class="container">
+        <div class="slider-content">
+            <div class="slider-content-left">
+                <div class="slider-content-left top">
+                    <img src="image/slideshow_14.webp" alt="">
+                </div>
+            </div>
+            <div class="slider-content-right">
+                <img src="image/solid1right.webp" alt="">
+                <img src="image/solid2right.webp" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slider-product-one">
+    <div class="container container1">
+        <div class="slider-product-one-content">
+            <li><img src="image/pro_poster_6659.jpg" alt=""></li>
+            <li>Lap top HP VICTUS</li>
+            <li>10000000d</li>
+        </div>
+        <div class="slider-product-one-content">
+            <li><img src="image/pro_poster_6713.jpg" alt=""></li>
+            <li>Acer Nitro 5 2021</li>
+            <li>10000000d</li>
+        </div>
+        <div class="slider-product-one-content">
+            <li><img src="image/pro_poster_6817.jpg" alt=""></li>
+            <li>Gigabyte</li>
+            <li>10000000d</li>
+        </div>
+        <div class="slider-product-one-content">
+            <li><img src="image/pro_poster_6937.jpg" alt=""></li>
+            <li>Lenovo Gaming</li>
+            <li>10000000d</li>
+        </div>
+    </div>
 
-              </div>
-              <div class="col-8 menu">
-                  <ul>
-                        <li><a href="">Trang chủ</a></li>
-                        <li><a href="">Sản phẩm</a></li>
-                        <li><a href="">Liên hệ</a></li>
-                        <li><a href="">Hướng dẫn</a></li>
-                  </ul>
-              </div>
-          </div>
-     </div>
-   </header>
-     <div class="col-12">
-
-     </div>
+</section>
+<script src="cart.js"></script>
 </body>
 </html>

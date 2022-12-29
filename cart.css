@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+.product-Items{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background-image: url("https://thuthuatnhanh.com/wp-content/uploads/2021/05/hinh-nen-mau-hong-dep.jpg")
+}
+.product-item img{
+    width: 200px;
+    height: 200px;
+}
+.product-item{
+    width: 19%;
+    padding: 12px;
+    text-align: center;
+}
+.cart{
+    width: 50px;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.cart table{
+    width: 100%;
+
+}
+.cart table thead tr th:first-child{
+    text-align: left;
+}
+.cart table tr td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+.cart{
+    position: fixed;
+    height: 100vh;
+    width: 400px;
+    right: 0;
+    top: 0;
+    background-color: rgb(221,195,195);
+    padding: 12px 20px;
+    overflow-y: scroll;
+}
