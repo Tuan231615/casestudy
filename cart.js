@@ -12,11 +12,12 @@ btn.forEach(function (button) {
 //thêm vào giỏ hàng
 function addCart(productImg, productPrice, productName) {
     let addTr = document.createElement("tr");
-    addTr.innerHTML = '<tr> <td><img style="width: 70px"  src="' + productImg + '" alt="">' + productName + '</td> <td><span>' + productPrice + '</span></td> <td><input style="width: 30px;outline: none" type="number" value="1" min="1"></td> <td style="cursor: pointer"><span class="delete-cart">Xoá</span></td> </tr>';
-    let cartTable = document.querySelector("tbody");
-    cartTable.append(addTr);
-    cartTotal()
-    deleteCart()
+        addTr.innerHTML = '<tr> <td><img style="width: 70px"  src="' + productImg + '" alt="">' + productName + '</td> <td><span>' + productPrice + '</span></td> <td><input style="width: 30px;outline: none" type="number" value="1" min="1"></td> <td style="cursor: pointer"><span class="delete-cart">Xoá</span></td> </tr>';
+        let cartTable = document.querySelector("tbody");
+        cartTable.append(addTr);
+        cartTotal()
+        deleteCart()
+
 }
 // hàm tính tổng
 function cartTotal(){
@@ -39,7 +40,7 @@ function cartTotal(){
 
 
 // hàm xóa
-function deleteCart() {
+function deleteCart(){
     let cartItem = document.querySelectorAll("tbody tr");
     for(let i = 0; i < cartItem.length; i++){
         let productT = document.querySelectorAll(".delete-cart")
@@ -69,6 +70,6 @@ function inputChange() {
 //         window.location.href = "display.html";
 //         localStorage.setItem("user", "admin");
 //    } else {
-//         document.getElementById("text").innerHTML ="Mật khẩu hoặc tài khoản sai!.Yêu cầu nhập đúng tài khoản và mật khẩu"
+//         document.getElementById("text").innerHTML ="Mật khẩu hoặc tài Chan sai!.Yêu cầu nhập đúng tài khoản và mật khẩu"
  //   }
 //}
