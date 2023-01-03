@@ -5,8 +5,9 @@ btn.forEach(function (button) {
             let btnItem = event.target;
             let product = btnItem.parentElement;
             let productImg = product.querySelector("img").src;
-            let productName = product.querySelector("h1").innerText;
-            let productPrice = product.querySelector("span").innerText;
+            console.log(productImg)
+            let productName = product.querySelector("h1").innerHTML;
+            let productPrice = product.querySelector("span").innerHTML;
             addCart(productImg, productPrice, productName);
         }
     })
@@ -15,12 +16,15 @@ btn.forEach(function (button) {
 //thêm vào giỏ hàng
 function addCart(productImg, productPrice, productName) {
     let addTr = document.createElement("tr");
-    addTr.innerHTML = ` <tr>
-            <td><img style="width: 70px"  src="${productImg}" alt="">${productName}</td>
-            <td><span>${productPrice}</span></td>
-            <td><input style="width: 30px;outline: none" type="number" value="1" min="1"></td>
-            <td style="cursor: pointer"><span class="delete-cart">Xoá</span></td>
-        </tr> `;
+    let cartItem = document.querySelectorAll("tbody tr");
+    for (let i = 0; i < cartItem.length; i++) {
+        let productT = document.querySelectorAll(".title")
+        if(productT[i].innerHTML === productName) {
+            alert("Sản phẩm của bạn đã có trong giỏ hàng ")
+            return;
+        }
+    }
+    addTr.innerHTML = '<td><img style="width: 70px"  src="'+productImg+'" alt=""><span class="title">'+productName+'</span></td> <td><span class="prices">'+productPrice+'</span></td> <td><input style="width: 30px;outline: none" type="number" value="1" min="1"></td> <td style="cursor: pointer"><span class="delete-cart">Xóa</span></td>';
     let cartTable = document.querySelector("tbody");
     cartTable.append(addTr);
     cartTotal()
@@ -36,7 +40,7 @@ function cartTotal() {
     let totalD;
     for (let i = 0; i < cartItem.length; i++) {
         let inputValue = parseInt(cartItem[i].querySelector("input").value);
-        let productPrice = parseInt(cartItem[i].querySelector("span").innerHTML);
+        let productPrice = parseInt(cartItem[i].querySelector(".prices").innerHTML);
         totalA = inputValue * productPrice;
         totalC = totalC + totalA;
 
@@ -72,15 +76,4 @@ function inputChange() {
     }
 }
 
-// function user() {
-//  let username = "admin";
-//    let password = "123";
-//    let user = document.getElementById("userName");
-//    let pass = document.getElementById("passWord");
-//    if (user.value === username && pass.value === password) {
-//         window.location.href = "display.html";
-//         localStorage.setItem("user", "admin");
-//    } else {
-//         document.getElementById("text").innerHTML ="Mật khẩu hoặc tài Chan sai!.Yêu cầu nhập đúng tài khoản và mật khẩu"
-//   }
-//}
+
